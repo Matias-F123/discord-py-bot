@@ -35,7 +35,7 @@ async def on_message(message):
         if message.author.id == Me:
             text = message.content
             text = text[8:]
-            r = requests.post('https://discord.com/api/webhooks/977034068258615307/kGnDVtNjeT1zB3dABj8AE_sHlYJOiuDpGP7X4WqNXuaUw2jfVQ2ZYguMrAz_wH-Tstzv', data={
+            r = requests.post(os.environ["WebHook"], data={
                 "username": "Bot-User",
                 "content": text
             })
